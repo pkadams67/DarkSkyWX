@@ -60,13 +60,10 @@ struct DailyWeather {
         if let time = dailyWeatherDict["time"] as? Double {
             day = dayStringFromTime(time)
         }
-        
     }
     
     func timeStringFromUnixTime(_ unixTime: Double) -> String {
         let date = Date(timeIntervalSince1970: unixTime)
-        
-        // Returns date formatted as 12 hour time.
         dateFormatter.dateFormat = "hh:mm a"
         return dateFormatter.string(from: date)
     }

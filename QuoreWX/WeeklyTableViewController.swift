@@ -36,9 +36,7 @@ class WeeklyTableViewController: UITableViewController {
         super.viewDidLoad()
         configureView()
         addBackgroundImage()
-        
         retrieveWeatherForecast()
-        
         images = images.shuffle
     }
     
@@ -82,10 +80,7 @@ class WeeklyTableViewController: UITableViewController {
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-    // MARK: - Navigation
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDaily" {
@@ -99,11 +94,7 @@ class WeeklyTableViewController: UITableViewController {
         }
     }
     
-    
-    // MARK: - Table view data source
-    
     override func numberOfSections(in tableView: UITableView) -> Int {
-        // Return the number of sections.
         return 1
     }
     
@@ -112,7 +103,6 @@ class WeeklyTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // Return the number of rows in the section.
         return weeklyWeather.count
     }
     
@@ -127,9 +117,8 @@ class WeeklyTableViewController: UITableViewController {
         return cell
     }
     
-    // MARK: - Table View Delegate Methods
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
-        view.tintColor = UIColor(red:0.20, green:0.34, blue:0.08, alpha:1.0)
+        view.tintColor = UIColor(red:0.20, green:0.34, blue:0.08, alpha:0.75)
         if let header = view as? UITableViewHeaderFooterView {
             header.textLabel!.font = UIFont(name: "HelveticaNeue-Thin", size: 14.0)
             header.textLabel!.textColor = UIColor.white
@@ -140,12 +129,9 @@ class WeeklyTableViewController: UITableViewController {
         let cell = tableView.cellForRow(at: indexPath)
         cell?.contentView.backgroundColor = UIColor(red:0.20, green:0.34, blue:0.08, alpha:1.0)
         let highlightView = UIView()
-        highlightView.backgroundColor = UIColor(red:0.20, green:0.34, blue:0.08, alpha:1.0)
+        highlightView.backgroundColor = UIColor(red:0.20, green:0.34, blue:0.08, alpha:0.75)
         cell?.selectedBackgroundView = highlightView
     }
-    
-    
-    // MARK: - Weather Fetching
     
     func retrieveWeatherForecast() {
         let forecastService = ForecastService(APIKey: forecastAPIKey)

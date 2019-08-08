@@ -26,38 +26,31 @@ class ViewController: UIViewController {
     @IBOutlet weak var highTemperatureLabel: UILabel?
     @IBOutlet weak var precipitationLabel: UILabel?
     @IBOutlet weak var humidityLabel: UILabel?
-    
     @IBOutlet weak var backgroundImage: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        
         backgroundImage.image = UIImage.init(named: imageString)
-        
         configureView()
-        
     }
     
     func configureView() {
         if let weather = dailyWeather {
-            self.title = weather.day
-            weatherIcon?.image = weather.icon
-            summaryLabel?.text = weather.summary
+            self.title             = weather.day
+            weatherIcon?.image     = weather.icon
+            summaryLabel?.text     = weather.summary
             sunriseTimeLabel?.text = weather.sunriseTime
-            sunsetTimeLabel?.text = weather.sunsetTime
+            sunsetTimeLabel?.text  = weather.sunsetTime
             
             if let lowTemp = weather.minTemperature,
-                let highTemp = weather.maxTemperature,
-                let rain = weather.precipChance,
-                let humidity = weather.humidity {
-                lowTemperatureLabel?.text = "\(lowTemp)º"
+                let highTemp               = weather.maxTemperature,
+                let rain                   = weather.precipChance,
+                let humidity               = weather.humidity {
+                lowTemperatureLabel?.text  = "\(lowTemp)º"
                 highTemperatureLabel?.text = "\(highTemp)º"
-                precipitationLabel?.text = "\(rain)%"
-                humidityLabel?.text = "\(humidity)%"
+                precipitationLabel?.text   = "\(rain)%"
+                humidityLabel?.text        = "\(humidity)%"
             }
-            
-            
         }
         
         if let buttonFont = UIFont(name: "HelveticaNeue-Thin", size: 20.0) {
@@ -67,7 +60,5 @@ class ViewController: UIViewController {
             ]
             UIBarButtonItem.appearance().setTitleTextAttributes(barButtonAttributesDictionary, for: UIControl.State())
         }
-        
     }
-    
 }

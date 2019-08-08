@@ -9,15 +9,15 @@
 import UIKit
 
 enum Icon: String {
-    case ClearDay = "clear-day"
-    case ClearNight = "clear-night"
-    case Rain = "rain"
-    case Snow = "snow"
-    case Sleet = "sleet"
-    case Wind = "wind"
-    case Fog = "fog"
-    case Cloudy = "cloudy"
-    case PartlyCloudyDay = "partly-cloudy-day"
+    case ClearDay          = "clear-day"
+    case ClearNight        = "clear-night"
+    case Rain              = "rain"
+    case Snow              = "snow"
+    case Sleet             = "sleet"
+    case Wind              = "wind"
+    case Fog               = "fog"
+    case Cloudy            = "cloudy"
+    case PartlyCloudyDay   = "partly-cloudy-day"
     case PartlyCloudyNight = "partly-cloudy-night"
     
     func toImage() -> (regularIcon: UIImage?, largeIcon: UIImage?) {
@@ -47,9 +47,8 @@ enum Icon: String {
         }
         
         let regularIcon = UIImage(named: "\(imageName).png")
-        let largeIcon = UIImage(named: "\(imageName)_large.png")
+        let largeIcon   = UIImage(named: "\(imageName)_large.png")
         
         return (regularIcon, largeIcon)
     }
 }
-

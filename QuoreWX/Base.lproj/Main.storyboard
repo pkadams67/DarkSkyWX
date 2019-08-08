@@ -21,16 +21,17 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <visualEffectView opaque="NO" alpha="0.20000000000000001" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-Ia-P7V">
+                            <visualEffectView opaque="NO" alpha="0.5" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="FdD-Ia-P7V">
                                 <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Hit-y1-COS">
                                     <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Presbyterian" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-KY-hri">
+                                        <imageView userInteractionEnabled="NO" alpha="0.75" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Presbyterian" translatesAutoresizingMaskIntoConstraints="NO" id="2RT-KY-hri">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="672"/>
                                         </imageView>
                                     </subviews>
+                                    <color key="tintColor" red="0.36470588240000001" green="0.70196078429999997" blue="0.023529411760000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                     <constraints>
                                         <constraint firstAttribute="trailing" secondItem="2RT-KY-hri" secondAttribute="trailing" id="90t-Ib-jgX"/>
                                         <constraint firstAttribute="bottom" secondItem="2RT-KY-hri" secondAttribute="bottom" id="Gwf-7Q-m7Q"/>
@@ -38,6 +39,7 @@
                                         <constraint firstItem="2RT-KY-hri" firstAttribute="top" secondItem="Hit-y1-COS" secondAttribute="top" id="vSc-fC-C0e"/>
                                     </constraints>
                                 </view>
+                                <color key="tintColor" red="0.36470588240000001" green="0.70196078429999997" blue="0.023529411760000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
                                 <blurEffect style="dark"/>
                             </visualEffectView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Partly cloudy throughout the day" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qa5-ps-6Dq">

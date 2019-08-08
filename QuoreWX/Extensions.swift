@@ -8,7 +8,6 @@
 
 import Foundation
 
-// MARK: Extensions
 extension Array {
     var shuffle:[Element] {
         var elements = self

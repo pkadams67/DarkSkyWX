@@ -6,7 +6,6 @@
 //  Copyright © 2019 Paul Adams. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
 struct CurrentWeather {

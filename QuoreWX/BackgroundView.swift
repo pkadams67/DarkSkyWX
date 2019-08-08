@@ -16,7 +16,7 @@ class BackgroundView: UIView {
         
         //// Color Declarations
         let quoreGreenLight: UIColor = UIColor(red:0.36, green:0.70, blue:0.02, alpha:1.0)
-        let quoreGreenDark: UIColor = UIColor(red:0.20, green:0.34, blue:0.08, alpha:1.0)
+        let quoreGreenDark: UIColor  = UIColor(red:0.20, green:0.34, blue:0.08, alpha:1.0)
         
         let context = UIGraphicsGetCurrentContext()
         
@@ -33,9 +33,5 @@ class BackgroundView: UIView {
                                     end: CGPoint(x: 160, y: 568),
                                     options: options.self)
         context?.restoreGState()
-        
-        
     }
-    
-    
 }
