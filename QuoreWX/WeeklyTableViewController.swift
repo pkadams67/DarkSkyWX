@@ -40,11 +40,10 @@ class WeeklyTableViewController: UITableViewController {
         images = images.shuffle
     }
     
-    
     func configureView() {
         tableView.backgroundView = BackgroundView()
         tableView.rowHeight = 64
-        if let navBarFont = UIFont(name: "HelveticaNeue-Thin", size: 20.0) {
+        if let navBarFont = UIFont(name: "HelveticaNeue", size: 20.0) {
             let navBarAttributesDictionary: [NSAttributedString.Key: Any]? = [
                 NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white,
                 NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): navBarFont
@@ -120,7 +119,7 @@ class WeeklyTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, willDisplayHeaderView view: UIView, forSection section: Int) {
         view.tintColor = UIColor(red:0.20, green:0.34, blue:0.08, alpha:0.75)
         if let header = view as? UITableViewHeaderFooterView {
-            header.textLabel!.font = UIFont(name: "HelveticaNeue-Thin", size: 14.0)
+            header.textLabel!.font = UIFont(name: "HelveticaNeue", size: 14.0)
             header.textLabel!.textColor = UIColor.white
         }
     }

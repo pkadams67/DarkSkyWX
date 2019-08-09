@@ -7,13 +7,13 @@
 	<key>longitude</key>
 	<real>-86.80879299999999</real>
 	<key>timezone</key>
-	<string>Etc/GMT+1</string>
+	<string>CST</string>
 	<key>offset</key>
 	<integer>-5</integer>
 	<key>currently</key>
 	<dict>
 		<key>time</key>
-		<date>2015-01-18T02:39:54Z</date>
+		<date>2019-08-09T22:00:00Z</date>
 		<key>summary</key>
 		<string>Overcast</string>
 		<key>icon</key>

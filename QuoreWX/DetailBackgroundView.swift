@@ -16,7 +16,6 @@ class DetailBackgroundView: UIView {
         // Color Declarations
         let quoreGreenLight: UIColor = UIColor(red:0.36, green:0.70, blue:0.02, alpha:1.0)
         let quoreGreenDark: UIColor = UIColor(red:0.20, green:0.34, blue:0.08, alpha:1.0)
-        
         let context = UIGraphicsGetCurrentContext()
         
         // Gradient Declarations
@@ -34,21 +33,19 @@ class DetailBackgroundView: UIView {
         context?.restoreGState()
         
         // Sun Path
-        
         let circleOrigin = CGPoint(x: 0, y: 0.80 * self.frame.height)
-        let circleSize = CGSize(width: self.frame.width, height: 0.65 * self.frame.height)
-        
-        let pathStrokeColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 0.390)
-        let pathFillColor = UIColor(red: 1.000, green: 1.000, blue: 1.000, alpha: 0.100)
+        let circleSize = CGSize(width: self.frame.width, height: 0.65 * self.frame.height)        
+        let pathStrokeColor = UIColor(red:1.00, green:1.00, blue:1.00, alpha:0.5)
+        let pathFillColor = UIColor(red:0.36, green:0.70, blue:0.02, alpha:0.33)
         
         // Sun Drawing
         let sunPath = UIBezierPath(ovalIn: CGRect(x: circleOrigin.x, y: circleOrigin.y, width: circleSize.width, height: circleSize.height))
         pathFillColor.setFill()
         sunPath.fill()
         pathStrokeColor.setStroke()
-        sunPath.lineWidth = 1
+        sunPath.lineWidth = 2
         context?.saveGState()
-        context?.setLineDash(phase: 0, lengths: [2, 2])
+        context?.setLineDash(phase: 0, lengths: [10, 5])
         sunPath.stroke()
         context?.restoreGState()
         

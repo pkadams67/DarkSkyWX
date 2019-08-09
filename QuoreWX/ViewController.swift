@@ -53,7 +53,7 @@ class ViewController: UIViewController {
             }
         }
         
-        if let buttonFont = UIFont(name: "HelveticaNeue-Thin", size: 20.0) {
+        if let buttonFont = UIFont(name: "HelveticaNeue", size: 20.0) {
             let barButtonAttributesDictionary: [NSAttributedString.Key: Any]? = [
                 NSAttributedString.Key(rawValue: NSAttributedString.Key.foregroundColor.rawValue): UIColor.white,
                 NSAttributedString.Key(rawValue: NSAttributedString.Key.font.rawValue): buttonFont

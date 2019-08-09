@@ -17,14 +17,28 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.36470588240000001" green="0.70196078429999997" blue="0.023529411760000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
-                        <color key="tintColor" red="0.36470588240000001" green="0.70196078429999997" blue="0.023529411760000001" alpha="0.5" colorSpace="custom" customColorSpace="sRGB"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="quore" translatesAutoresizingMaskIntoConstraints="NO" id="zgu-Ky-KDJ">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                            </imageView>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="zgu-Ky-KDJ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="-44" id="2KY-0G-P4m"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="zgu-Ky-KDJ" secondAttribute="bottom" constant="-34" id="6lM-Ni-ihw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="zgu-Ky-KDJ" secondAttribute="bottom" constant="-34" id="EmO-Q8-EQd"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zgu-Ky-KDJ" secondAttribute="trailing" id="UHs-GJ-9af"/>
+                            <constraint firstItem="zgu-Ky-KDJ" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leadingMargin" constant="-20" id="h4o-bI-cy6"/>
+                            <constraint firstItem="zgu-Ky-KDJ" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="topMargin" constant="-44" id="pF7-nS-BS0"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52.173913043478265" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="quore" width="688" height="900"/>
+    </resources>
 </document>

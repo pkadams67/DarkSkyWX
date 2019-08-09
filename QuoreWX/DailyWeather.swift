@@ -30,6 +30,7 @@ struct DailyWeather {
         } else {
             maxTemperature = nil
         }
+        
         if let min = dailyWeatherDict["temperatureMin"] as? NSNumber {
             minTemperature = min.intValue
         } else {
@@ -41,22 +42,28 @@ struct DailyWeather {
         } else {
             humidity = nil
         }
+        
         if let precipChanceFloat = dailyWeatherDict["precipProbability"] as? Double {
             precipChance = Int(precipChanceFloat * 100)
         } else {
             precipChance = nil
         }
+        
         summary = dailyWeatherDict["summary"] as? String
+        
         if let iconString = dailyWeatherDict["icon"] as? String,
             let iconEnum = Icon(rawValue: iconString) {
             (icon, largeIcon) = iconEnum.toImage()
         }
+        
         if let sunriseDate = dailyWeatherDict["sunriseTime"] as? Double {
             sunriseTime = timeStringFromUnixTime(sunriseDate)
         }
+        
         if let sunsetDate = dailyWeatherDict["sunsetTime"] as? Double {
             sunsetTime = timeStringFromUnixTime(sunsetDate)
         }
+        
         if let time = dailyWeatherDict["time"] as? Double {
             day = dayStringFromTime(time)
         }
